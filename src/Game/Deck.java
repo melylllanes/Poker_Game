@@ -28,8 +28,8 @@ public class Deck {
     public static List makeDeck() {
 
         palo.forEach((i) -> {
-            valor.forEach((j) -> {
-                color.forEach((k) -> {
+            color.forEach((j) -> {
+                valor.forEach((k) -> {
                     myDeck.add(Arrays.asList(i, j, k));
                 });
             });
