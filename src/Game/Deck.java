@@ -20,27 +20,32 @@ public class Deck {
     public static Random random = new Random();
     public static final List valor = new ArrayList(Arrays.asList(2, 3, 4, 5, 6, 7, 8, 9,
             10, "Ace", "Jack", "Queen", "King"));
-    public static final List palo = new ArrayList(Arrays.asList("Corazones", "Tréboles", "Diamantes","Picas" ));
+    public static final List palo = new ArrayList(Arrays.asList("Corazones", "Tréboles", "Diamantes", "Picas"));
 
     public static final List color = new ArrayList(Arrays.asList("Negro", "Rojo"));
     public static List myDeck = new ArrayList<>();
 
     public static List makeDeck() {
+     
+        int tamaño = color.size()/2;
 
-        palo.forEach((i) -> {
-            color.forEach((j) -> {
-                valor.forEach((k) -> {
-                    myDeck.add(Arrays.asList(i, j, k));
-                });
-            });
-        }); 
+        for (int i = 0; i < palo.size(); i++) {
+            for (int j = 0; j < tamaño; j++) {
+                for (int k = 0; k < valor.size(); k++) {
+                    myDeck.add(Arrays.asList(palo.get(i), color.get(j), valor.get(k)));
+
+                }
+
+            }
+
+        }
 
         return myDeck;
     }
 
     public static void shuffle() {
         System.out.println("Se mezclo el deck");
-  
+
     }
 
     public static void head() {
@@ -64,7 +69,7 @@ public class Deck {
     public static void hand() {
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Carta" + (i+1) + " " + myDeck.get(i));
+            System.out.println("Carta" + (i + 1) + " " + myDeck.get(i));
         }
         for (int i = 0; i < 5; i++) {
             myDeck.remove(i);
