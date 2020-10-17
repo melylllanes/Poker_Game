@@ -22,20 +22,21 @@ public class Deck {
             10, "Ace", "Jack", "Queen", "King"));
     public static final List palo = new ArrayList(Arrays.asList("Corazones", "Tréboles", "Diamantes", "Picas"));
 
-    public static final List color = new ArrayList(Arrays.asList("Negro", "Rojo"));
+    public static final List color = new ArrayList(Arrays.asList("Rojo", "Negro"));
     public static List myDeck = new ArrayList<>();
 
     public static List makeDeck() {
-     
-        int tamaño = color.size()/2;
 
+        //int tamaño = color.size()/2;
         for (int i = 0; i < palo.size(); i++) {
-            for (int j = 0; j < tamaño; j++) {
-                for (int k = 0; k < valor.size(); k++) {
-                    myDeck.add(Arrays.asList(palo.get(i), color.get(j), valor.get(k)));
+            for (int k = 0; k < valor.size(); k++) {
+
+                if (palo.get(i) == "Corazones" || palo.get(i) == "Diamantes") {
+                    myDeck.add(Arrays.asList(palo.get(i), color.get(0), valor.get(k)));
+                } else {
+                    myDeck.add(Arrays.asList(palo.get(i), color.get(1), valor.get(k)));
 
                 }
-
             }
 
         }

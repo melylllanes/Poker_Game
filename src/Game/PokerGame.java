@@ -16,9 +16,9 @@ public class PokerGame {
     static Scanner sc = new Scanner(System.in);
 
     public static void showMenu() {
-        boolean resValida = false;
-        Deck.makeDeck();
-        while (!resValida) {
+        boolean resInvalida = false;
+        System.out.println(Deck.makeDeck());
+        while (!resInvalida) {
             System.out.println("Bienvenido a Poker!");
             System.out.println("1 Mezclar deck");
             System.out.println("2 Sacar una carta");
@@ -50,7 +50,7 @@ public class PokerGame {
                     System.out.println("-----------------------------------------------------------");
                     break;
                 case 0:
-                    resValida = true;
+                    resInvalida = true;
                     break;
                 default:
                     System.out.println("**Opcion NO valida**");
