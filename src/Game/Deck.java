@@ -26,7 +26,6 @@ public class Deck {
 
     public static List makeDeck() {
 
-        //int tamaño = color.size()/2;
         for (int i = 0; i < palo.size(); i++) {
             for (int k = 0; k < valor.size(); k++) {
 
