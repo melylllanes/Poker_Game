@@ -5,7 +5,6 @@
  */
 package Game;
 
-import static java.lang.Math.random;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -70,6 +69,7 @@ public class Deck {
     public static void hand() {
 
         for (int i = 0; i < 5; i++) {
+            
             System.out.println("Carta" + (i + 1) + " " + myDeck.get(i));
         }
         for (int i = 0; i < 5; i++) {
