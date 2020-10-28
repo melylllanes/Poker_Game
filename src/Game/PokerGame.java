@@ -5,7 +5,6 @@
  */
 package Game;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -17,8 +16,8 @@ public class PokerGame {
     static Scanner sc = new Scanner(System.in);
 
     public static void showMenu() {
-        boolean resInvalida = false;
-        System.out.println(Deck.makeDeck());
+        boolean resInvalida = false; 
+        Deck.makeDeck();
         System.out.println("Bienvenido a Poker!");
 
         while (!resInvalida) {
@@ -82,7 +81,7 @@ public class PokerGame {
                 default:
                     System.out.println("-----------------------------------------------------------");
                     System.out.println("**Opcion NO valida**");
-                    System.out.println("Please enter a number from 0-4");
+                    System.out.println("Introduzca un numero del 0 al 4");
                     System.out.println("-----------------------------------------------------------");
 
             }
